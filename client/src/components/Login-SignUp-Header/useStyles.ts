@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   selected: {
     color: '#fff',
-    background: 'red',
+    background: '#f14140',
     border: 'none',
     marginLeft: '10px',
     width: '120px',
