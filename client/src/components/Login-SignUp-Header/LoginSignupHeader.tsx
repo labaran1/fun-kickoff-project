@@ -1,9 +1,8 @@
-import { AppBar, Grid, Toolbar, Typography, Button, Avatar, Box, Paper } from '@material-ui/core';
+import { Typography, Button, Box } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useStyles from './useStyles';
 import Logo from '../../Images/logo.png';
-// import Image from "material-ui-image";
 
 interface Props {
   current: boolean;
