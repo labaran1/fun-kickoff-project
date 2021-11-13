@@ -18,13 +18,16 @@ const useStyles = makeStyles(() => ({
   headNote: {
     fontWeight: 'bolder',
     marginBottom: '40px',
+    fontFamily: 'Roboto, Arial',
   },
   linkNextPage: {
     color: '#f14140',
     fontWeight: 'bold',
+    fontFamily: 'Roboto, Arial',
   },
   linkNextPageContainer: {
     fontWeight: 'bold',
+    fontFamily: 'Roboto, Arial',
   },
   Card: {
     margin: 'auto',

@@ -18,7 +18,7 @@ export default function LoginSignupHeader({ current }: Props) {
 
       <Box className={classes.linkContainer}>
         <Link to="#" className={classes.sitterLink}>
-          <Typography variant="h6" color="initial">
+          <Typography variant="h6" color="initial" className={classes.sitterLink}>
             BECOME A SITTER
           </Typography>
         </Link>

@@ -9,10 +9,11 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '20rem',
   },
   label: {
-    fontWeight: 'bolder',
+    fontWeight: 'bold',
     color: '#000',
-    fontSize: 14,
+    fontSize: 12,
     textTransform: 'uppercase',
+    fontFamily: 'Roboto, Arial',
   },
   inputs: {
     marginTop: '.8rem',

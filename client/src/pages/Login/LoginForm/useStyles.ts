@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   label: {
     fontWeight: 'bold',
     color: '#000',
-    fontSize: 15,
+    fontSize: 12,
+    fontFamily: 'Roboto, Arial',
   },
   forgot: {
     paddingRight: 10,

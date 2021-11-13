@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   sitterLink: {
     margin: 'auto',
     color: '#000',
+    fontSize: '11px',
+    fontFamily: 'Roboto, Arial',
+    fontWeight: 'bold',
   },
   selected: {
     color: '#fff',
