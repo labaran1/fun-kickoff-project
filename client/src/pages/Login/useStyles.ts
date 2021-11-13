@@ -15,12 +15,20 @@ const useStyles = makeStyles(() => ({
     minHeight: '100vh',
     paddingTop: 23,
   },
-  welcome: {
-    fontSize: 26,
-    paddingBottom: 20,
-    color: '#000000',
-    fontWeight: 700,
-    fontFamily: "'Open Sans'",
+  headNote: {
+    fontWeight: 'bolder',
+    marginBottom: '40px',
+  },
+  linkNextPage: {
+    color: '#f14140',
+    fontWeight: 'bold',
+  },
+  linkNextPageContainer: {
+    fontWeight: 'bold',
+  },
+  Card: {
+    margin: 'auto',
+    marginTop: '50px',
   },
 }));
 
