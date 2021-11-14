@@ -98,3 +98,31 @@ else {
 
  }
 )
+
+
+// @route GET /profiles
+// @desc list of profiles
+// @access Public
+
+
+exports.getProfiles = asyncHandler(async(req, res, next)=> {
+
+    const profiles = await Profile.find().pretty()
+
+    if(profiles) {
+        res.status(201).json({
+            success: {
+                profiles: profiles
+            }
+        }
+        )
+    }
+    else {
+        res.status(404);
+            throw new Error("No User Found");
+    }
+    
+     
+    
+    
+})
