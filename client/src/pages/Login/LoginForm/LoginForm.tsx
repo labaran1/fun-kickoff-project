@@ -90,7 +90,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
               {isSubmitting ? <CircularProgress /> : 'Login'}
             </Button>
           </Box>
-          <div style={{ height: 45 }} />
+          <Box style={{ height: 45 }} />
         </form>
       )}
     </Formik>
