@@ -43,3 +43,34 @@ exports.createProfile = asyncHandler(async()=> {
       }
 
 })
+
+
+// @route PUT /profile
+// @desc Given an ID and new parameters, update the profile
+// @access Private
+
+exports.updateProfile = asyncHandler(async()=> {
+    const { firstName, lastName,description, availability, id} = req.body
+    const profile = await Profile.findById(id);
+
+    if (!profile) {
+        res.status(401);
+        throw new Error("Not authorized");
+      }
+
+
+    Profile.updateOne({ 
+            _id:id
+        }, {
+        $set: {
+            firstName:firstName,
+            lastName:lastName,
+            description:description,
+            availability:availability
+        }
+        }
+
+        );
+
+
+})
