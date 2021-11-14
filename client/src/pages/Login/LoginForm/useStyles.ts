@@ -5,19 +5,26 @@ const useStyles = makeStyles((theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  label: {
-    fontSize: 19,
-    color: 'rgb(0,0,0,0.4)',
-    paddingLeft: '5px',
+
+  formElement: {
+    marginLeft: '20rem',
   },
   inputs: {
     marginTop: '.8rem',
-    height: '2rem',
-    padding: '5px',
+    height: '1.5rem',
+    padding: '4px',
+    width: '20vw',
+  },
+  label: {
+    fontWeight: 'bold',
+    color: '#000',
+    fontSize: 12,
+    fontFamily: 'Roboto, Arial',
   },
   forgot: {
     paddingRight: 10,
     color: '#3a8dff',
+    marginLeft: -70,
   },
   submit: {
     margin: theme.spacing(3, 2, 2),
@@ -27,8 +34,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     marginTop: 49,
     fontSize: 16,
-    backgroundColor: '#3a8dff',
+    backgroundColor: '#f14140',
     fontWeight: 'bold',
+    color: 'White',
   },
 }));
 

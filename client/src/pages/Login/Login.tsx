@@ -1,15 +1,13 @@
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
+import { CssBaseline, Grid, Box, Typography, Card, CardContent } from '@material-ui/core';
 import { FormikHelpers } from 'formik';
-import Typography from '@material-ui/core/Typography';
 import useStyles from './useStyles';
 import login from '../../helpers/APICalls/login';
 import LoginForm from './LoginForm/LoginForm';
 import AuthHeader from '../../components/AuthHeader/AuthHeader';
+import LoginSignupHeader from '../../components/Login-SignUp-Header/LoginSignupHeader';
 import { useAuth } from '../../context/useAuthContext';
 import { useSnackBar } from '../../context/useSnackbarContext';
+import { Link } from 'react-router-dom';
 
 export default function Login(): JSX.Element {
   const classes = useStyles();
@@ -37,22 +35,31 @@ export default function Login(): JSX.Element {
   };
 
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container>
       <CssBaseline />
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} square>
-        <Box className={classes.authWrapper}>
-          <AuthHeader linkTo="/signup" asideText="Don't have an account?" btnText="Create account" />
-          <Box width="100%" maxWidth={450} p={3} alignSelf="center">
-            <Grid container>
-              <Grid item xs>
-                <Typography className={classes.welcome} component="h1" variant="h5">
-                  Welcome back!
+      <Grid>
+        <LoginSignupHeader current={true} />
+      </Grid>
+
+      <Grid item xs={12} sm={8} md={7} className={classes.Card}>
+        <Box width="100%" maxWidth={1050} p={4} alignSelf="center">
+          <Card variant="outlined">
+            <CardContent>
+              <Typography variant="h5" align="center" className={classes.headNote}>
+                Welcome Back
+              </Typography>
+              <LoginForm handleSubmit={handleSubmit} />
+
+              <Box alignSelf="center">
+                <Typography align="center" className={classes.linkNextPageContainer}>
+                  {" Don't have an account?"}{' '}
+                  <Link to="/signup" className={classes.linkNextPage}>
+                    Sign up
+                  </Link>
                 </Typography>
-              </Grid>
-            </Grid>
-            <LoginForm handleSubmit={handleSubmit} />
-          </Box>
-          <Box p={1} alignSelf="center" />
+              </Box>
+            </CardContent>
+          </Card>
         </Box>
       </Grid>
     </Grid>
