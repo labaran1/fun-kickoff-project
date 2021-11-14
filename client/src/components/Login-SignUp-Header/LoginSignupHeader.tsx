@@ -19,17 +19,17 @@ export default function LoginSignupHeader({ current }: Props) {
       <Box className={classes.linkContainer}>
         <Link to="#" className={classes.sitterLink}>
           <Typography variant="h6" color="initial" className={classes.sitterLink}>
-            BECOME A SITTER
+            become a sitter
           </Typography>
         </Link>
         <Link to="/login" className={classes.link}>
           <Button variant="outlined" className={current ? classes.selected : classes.unselected}>
-            LOGIN
+            login
           </Button>
         </Link>
         <Link to="/signup" className={classes.link}>
           <Button variant="outlined" className={!current ? classes.selected : classes.unselected}>
-            SIGN UP
+            sign up
           </Button>
         </Link>
       </Box>

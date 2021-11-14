@@ -21,12 +21,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '11px',
     fontFamily: 'Roboto, Arial',
     fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
   selected: {
     color: '#fff',
     background: '#f14140',
     border: 'none',
     marginLeft: '10px',
+    textTransform: 'uppercase',
     width: '120px',
     padding: '10px',
     '&:hover': {
@@ -40,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '10px',
     width: '120px',
     padding: '10px',
+    textTransform: 'uppercase',
 
     '&:hover': {
       background: '#fff',
