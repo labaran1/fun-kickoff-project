@@ -12,9 +12,9 @@ export default function LoginSignupHeader({ current }: Props) {
   const classes = useStyles();
   return (
     <Box className={classes.nav}>
-      <div>
+      <Box>
         <img src={Logo} alt="Logo" />
-      </div>
+      </Box>
 
       <Box className={classes.linkContainer}>
         <Link to="#" className={classes.sitterLink}>
