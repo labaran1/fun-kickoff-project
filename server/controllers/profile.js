@@ -6,7 +6,7 @@ const asyncHandler = require("express-async-handler");
 // @route POST /profile
 // @desc Given parameters passed in , create a profile
 // @access Private
-exports.createProfile = asyncHandler(async()=> {
+exports.createProfile = asyncHandler(async(req, res, next)=> {
     const { firstName, lastName,description, availability, id} = req.body;
 
     const user = await User.findById(id);
@@ -49,7 +49,7 @@ exports.createProfile = asyncHandler(async()=> {
 // @desc Given an ID and new parameters, update the profile
 // @access Private
 
-exports.updateProfile = asyncHandler(async()=> {
+exports.updateProfile = asyncHandler(async(req, res, next)=> {
     const { firstName, lastName,description, availability, id} = req.body
     const profile = await Profile.findById(id);
 
@@ -74,3 +74,27 @@ exports.updateProfile = asyncHandler(async()=> {
 
 
 })
+
+// @route GET /profile:id
+// @desc  Given an ID, return profile with that ID
+// @access Public
+
+
+exports.getProfile = asyncHandler(async(req, res, next)=> {
+const id = req.params.id;
+const profile = await Profile.findById(id);
+if(profile) {
+    res.status(201).json({
+        success: {
+            profile: profile
+        }
+    }
+    )
+}
+else {
+    res.status(404);
+        throw new Error("Profile Not found");
+}
+
+ }
+)
